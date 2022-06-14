@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shoe-Project</title>
+</head>
+<body >
+    <header class="container">
+       
+
+        <div class="menu">
+            <li>
+                <a href="">Men</a>
+                <div class="sub-menu">
+                    <ul class="flex-li">
+                        <li class="li-padding"><a href="">New & Featured</a>
+                            <ul>
+                                <li><a href="">New Releases</a></li>
+                                <li><a href="">New Releases</a></li>
+                                <li><a href="">New Releases</a></li>
+                                
+                                
+                            </ul>
+                        </li>
+                        
+                        <li class="li-padding"><a href="">Shoes</a>
+                            <ul>
+                                <li><a href="">Newest Sneakers</a></li>
+                                <li><a href="">Newest Sneakers</a></li>
+                                <li><a href="">Newest Sneakers</a></li>
+                                
+                            </ul>
+                        </li>
+    
+                        <li class="li-padding"><a href="">Clothing</a>
+                            <ul>
+                                <li><a href="">All Clothing</a></li>
+                                <li><a href="">All Clothing</a></li>
+                                <li><a href="">All Clothing</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="li-padding"><a href="">Shop By Sport</a>
+                            <ul>
+                                <li><a href="">Running</a></li>
+                                <li><a href="">Running</a></li>
+                                <li><a href="">Running</a></li>
+                                
+                            </ul>
+                        </li>
+    
+                        <li class="li-padding"><a href="">Icon</a>
+                        <ul>
+                            <li><a href="">Blazes</a></li>
+                            <li><a href="">Blazes</a></li>
+                            <li><a href="">Blazes</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="">Women</a></li>
+            <li><a href="">Kids</a></li>
+            <li><a href="">Customise</a></li>
+            <li><a href="">Sale</a></li>
+        </div>
+
+        <div class="logo">
+            <img style="height: 50px; width:90px; padding-top: 6px;" src="./images/logo1.png" alt="">
+        </div>
+
+        <div class="other">
+
+            <form style="padding-top: 15px;" action="" class="search-form">
+                <button style="padding-top: 28px;"  class="submit"><i class="fa fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="Search">
+            </form>
+            <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
+            <li><a href=""><i class="fa-regular fa-user"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-shopping-bag"></i></a></li>
+        </div>
+    </header>
+
+    <section id="slider">
+        <div class="slider-container">
+            <img src="./images/size_1_slides.webp" alt="">
+            <img src="./images/size_2_sandalshopnike.webp" alt="">
+            <img src="./images/size_3_nike_v2.webp" alt="">
+        </div>
+
+        <div class="dot-container">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+    <section class="home-new-prod">
+        <div class="title-section">NEW ARRIVAL</div>
+        <div class="exclusive-tabs"></div>
+    </section>
+
+
+<section class="app-container">
+    <p>Tải ứng dụng</p>
+</section>
+</body>
+
+<script>
+    const positionImg = document.querySelectorAll(".slider-container img")
+    const imgContainer = document.querySelector(".slider-container")
+    const dotItem = document.querySelectorAll(".dot")
+    let imgNum = positionImg.length
+    let index = 0;
+    
+    // console.log(positionImg)
+    positionImg.forEach(function(image, index){
+       
+        image.style.left = index*100 + "%"
+        dotItem[index].addEventListener("click",function(){
+            slider(index)
+        })
+    })
+
+    function imgSlide()
+    {
+        index++;
+        console.log(index)
+        if(index >= imgNum) {index = 0}
+        slider(index)
+    }
+
+    function slider(){
+        imgContainer.style.left = "-" + index*100 + "%"
+        const dotActive = document.querySelector(".active")
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
+    }
+    setInterval(imgSlide,5000)
+</script>
+</html>
