@@ -250,151 +250,102 @@
             <li><a href=""><i class="fa-solid fa-shopping-bag"></i></a></li>
         </div>
     </header>
-<!-- -------------------------delivery------------------ -->
-
-
-    <section class="delivery">
+<!-- -------------------------payment------------------ -->
+    <section class="payment">
         <div class="container">
-            <div class="delivery-top-wrap">
-                <div class="delivery-top ">
-                    <div class="delivery-top-icon-item delivery-top-item">
+            <div class="payment-top-wrap">
+                <div class="payment-top ">
+                    <div class="payment-top-icon-item payment-top-item">
                         <i class="fa fa-shopping-cart "></i>
                     </div>
     
-                    <div class="delivery-top-icon-address delivery-top-item">
+                    <div class="payment-top-icon-address payment-top-item">
                         <i class="fa-solid fa-location-dot "></i>
                     </div>
     
-                    <div class="delivery-top-icon-paymen delivery-top-item">
+                    <div class="payment-top-icon-payment payment-top-item">
                         <i class="fa-solid fa-money-bill-wave "></i>
                     </div>
                 </div>
                </div>
+        </div>
 
-               <div class="container">
-                <div class="delivery-content row">
-                    <div class="delivery-content-left">
-                        <p>Please choose a shipping address</p>
-                        <div class="delivery-content-left-login row">
-                            <i class="fa fa-sign-in"></i>
-                            <p>Login if you already have a shop account</p>
-                        </div>
-
-                        <div class="delivery-content-left-retail row">
-                            <input checked type="radio" name="loaikhach">
-                            <p><span style="font-weight: bold;">Retail customer</span>(If you do not want to save the information)</p>
-                        </div>
-
-                        <div class="delivery-content-left-register row">
-                            <input  type="radio" name="loaikhach">
-                            <p><span style="font-weight: bold;">Register</span>(create a new account with the information below)</p>
-                        </div>
-
-                        <div class="delivery-content-left-input-top row">
-                            <div class="delivery-content-left-input-top-item">
-                                <label for="">Full name<span style="color:red">*</span></label>
-                                <input type="text">
-                            </div>
-
-                            <div class="delivery-content-left-input-top-item">
-                                <label for="">Phone<span style="color:red">*</span></label>
-                                <input type="text">
-                            </div>
-
-                            <div class="delivery-content-left-input-top-item">
-                                <label for="">Province/City <span style="color:red">*</span></label>
-                                <input type="text">
-                            </div>
-
-                            <div class="delivery-content-left-input-top-item">
-                                <label for="">District<span style="color:red">*</span></label>
-                                <input type="text">
+        <div class="container">
+            <div class="payment-content row">
+                <div class="payment-content-left">
+                    <div class="payment-content-left-border">
+                        <div class="payment-content-left-method-delivery">
+                            <p style="font-weight: bold;">Delivery method</p>
+                            <div class="payment-content-left-method-delivery-item">
+                                <input type="radio">
+                                <label for="">Express delivery</label>
                             </div>
                         </div>
-
-                        <div class="delivery-content-left-input-bottom">
-                            <label for="">Address<span style="color:red">*</span></label>
-                                <input type="text">
+    
+                        <div class="payment-content-left-method-payment">
+                            <p style="font-weight: bold;">Method Payment</p>
+                            <p>All transactions will be secure and encrypted. Credit card information will never be saved.</p>
+                            <div class="payment-content-left-method-payment-item">
+                                <input name="method-payment" type="radio">
+                                <label for="">Pay by credit card (OnePay)</label>
+                            </div>
+    
+                            <div class="payment-content-left-method-payment-item-img">
+                                <img src="./images/visa.png" alt="">
+                                <img src="./images/mastercard.png" alt="">
+                            </div>
+    
+                            <div class="payment-content-left-method-payment-item">
+                                <input  name="method-payment" type="radio">
+                                <label for="">Payment by ATM card (OnePay)</label>
+                                <p>Support online payment over 38 popular banks in Vietnam.</p>
+                            </div>
+                           
+    
+                            <div class="payment-content-left-method-payment-item">
+                                <input name="method-payment" type="radio">
+                                <label for="">Pay with MoMo</label>
+                            </div>
+    
+                            <div class="payment-content-left-method-payment-item">
+                                <input checked name="method-payment" type="radio">
+                                <label for="">COD</label>
+                            </div>
                         </div>
-
-                        <div class="delivery-content-left-button row">
-                            <a href=""><span><i class="fa-solid fa-angles-left"></i></span> Back to Cart</a>
-                            <button style="font-weight: bold;">PAY AND CHECKOUT</button>
-                        </div>
-                    </div>
-
-                    <div class="delivery-content-right">
-                        <table>
-                            <tr>
-                                <th>Product name</th>
-                                <th>Sales</th>
-                                <th>Qty</th>
-                                <th>Price</th>
-                            </tr>
-
-                            <tr>
-                                <td>Men's Chuck Taylor All Star High Street High Top Sneaker</td>
-                                <td>-5%</td>
-                                <td>1</td>
-                                <td>49.99</td>
-                            </tr>
-
-                            <tr>
-                                <td style="font-weight: bold;border-bottom: 2px solid #dddddd;" colspan="3">Total</td>
-                                <td style="font-weight: bold;">49.99</td>
-                            </tr>
-
-                            <tr>
-                                <td style="font-weight: bold;" colspan="3">VAT</td>
-                                <td style="font-weight: bold;">0.5</td>
-                            </tr>
-
-                            <tr>
-                                <td style="font-weight: bold;" colspan="3">Total price</td>
-                                <td style="font-weight: bold;">49.99</td>
-                            </tr>
-                        </table>
                     </div>
                 </div>
-               </div>
+
+                <div class="payment-content-right">
+                    <div class="payment-content-right-border">
+                        <div class="payment-content-right-button">
+                            <input type="text" placeholder="gift code">
+                            <button><i class="fa fa-check"></i></button>
+                        </div>
+    
+                        <div class="payment-content-right-button">
+                            <input type="text" placeholder="collaborator code">
+                            <button><i class="fa fa-check"></i></button>
+                        </div>
+    
+                        <div class="payment-content-right-mnv">
+                            <select name="" id="">
+                                <option value="">Choose a loyalty code</option>
+                                <option value="">D35D</option>
+                                <option value="">A35A</option>
+                                <option value="">E35E</option>
+                                <option value="">I35I</option>
+                            </select>
+                        </div>
+    
+                        <div class="payment-content-right-payment">
+                            <button>Continue Payment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-
-<!-- ------------------------footer- ----------------- -->
-
-<section class="app-container">
-    <p>download app</p>
-    <div class="app-google">
-        <a href=""><img src="./images/chplay.png" alt=""></a>
-        <a href=""><img src="./images/appstore.png" alt=""></a>
-    </div>
-    <p>Receive newsletter</p>
-    <input type="text" placeholder="Enter your email...">
-</section>
-<div class="footer-top">
-    <li><a href=""><img src="./images/bocongthuong.png" alt=""></a></li>
-    <li> <a href="">Contact</a></li>
-    <li> <a href="">Recruit</a></li>
-    <li> <a href="">About</a></li>
-    <li>
-        <a href="" class="fab fa-facebook-f"></a>
-        <a href="" class="fab fa-twitter"></a>
-        <a href="" class="fa-brands fa-youtube"></a>
-    </li>
-</div>
-
-
-<div class="footer-center">
-    <p>
-        Joint Stock Company LDshoe <br>
-        Address: 29 Phuoc Hoa 5, Khue Trung, Cam Le, Da Nang : 0765.530.320 <br>
-        Order online : <b>0765.530.320</b>
-    </p>
-</div>
-<div class="footer-end footer-center">
-    ©LDshoe All rights reserved
-</div>
 </body>
 <script language="javascript" src="./js/slider.js"></script>
 <script language="javascript" src="./js/script.js"></script>
