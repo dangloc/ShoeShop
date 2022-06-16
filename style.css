@@ -637,11 +637,11 @@ footer {
 /* --------------cart----------------- */
 
 .cart{
-  padding: 90px 0 0;
+  padding: 60px 0 0;
 }
 
 .cart-content{
-  padding-bottom: 90px;
+  padding-bottom: 60px;
 }
 
 .cart-top-wrap{
@@ -818,4 +818,11 @@ color: red;
   font-family: var(--main-text-font);
   font-size:12px;
   color: #333;
+}
+
+
+/* -------------------------delivery------------------- */
+.delivery
+{
+  padding: 60px 0 0 ;
 }
