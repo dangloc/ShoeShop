@@ -19,11 +19,14 @@ smallImg.forEach(function(item, x){
 
 const bq = document.querySelector(".bq")
 const des = document.querySelector(".des")
+
 if(bq)
 {
     bq.addEventListener("click", function(){
         document.querySelector(".product-content-right-bottom-content-des").style.display = "none"
+        document.querySelector(".product-content-right-bottom-content-title-border-bq").style.display = "block"
         document.querySelector(".product-content-right-bottom-content-bq").style.display = "block"
+        document.querySelector(".product-content-right-bottom-content-title-border-des").style.display = "none"
     })
 }
 
@@ -31,7 +34,9 @@ if(des)
 {
     des.addEventListener("click", function(){
         document.querySelector(".product-content-right-bottom-content-des").style.display = "block"
+        document.querySelector(".product-content-right-bottom-content-title-border-des").style.display = "block"
         document.querySelector(".product-content-right-bottom-content-bq").style.display = "none"
+        document.querySelector(".product-content-right-bottom-content-title-border-bq").style.display = "none"
     })
 }
 
@@ -43,3 +48,5 @@ if(buttoN)
         document.querySelector(".product-content-right-bottom-content-big").classList.toggle("activeB")
     })
 }
+
+
