@@ -1,4 +1,8 @@
 <?php
+include "config.php";
+?>
+
+<?php
 class Database{
   public $host = DB_HOST;
   public $user = DB_USER;
@@ -13,7 +17,7 @@ class Database{
   }
 
   public function connectDB(){
-    $this->link= new mysql($this->host, $this->user, $this->pass, $this->dbname);
+    $this->link = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
     if(!$this->link)
     {
       $this-> error = "connection fail".$this->link->connect_error;
@@ -25,7 +29,7 @@ class Database{
   // select or read data
   public function select($query)
   {
-    $result = $this->link->select($query) or die($this->link->error.__LINE__);
+    $result = $this->link->query($query) or die($this->link->error.__LINE__);
     if($result->num_rows > 0)
     {
       return $result;
@@ -48,9 +52,9 @@ class Database{
   }
 
   // update database
-  public function update($qyery)
+  public function update($query)
   {
-    $update_row = $this->link->query($qyery) or die($this->link->error.__LINE__);
+    $update_row = $this->link->query($query) or die($this->link->error.__LINE__);
     if($update_row)
     {
       return $update_row;
