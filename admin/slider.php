@@ -10,8 +10,8 @@
   
         <li> <a href="">Product Type</a>
           <ul>
-            <li><a href="">Add Product Type</a></li>
-            <li><a href="">List Product Type</a></li>
+            <li><a href="addproducttype.php">Add Product Type</a></li>
+            <li><a href="listproducttype.php">List Product Type</a></li>
           </ul>
         </li>
   

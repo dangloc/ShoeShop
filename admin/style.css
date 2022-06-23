@@ -116,6 +116,12 @@ header h1 {
 
 .admin-content-right-category-list table tr th,td {
   border-bottom: 1px solid #dddddd;
+  
+}
+
+.admin-content-right-category-list table th,td
+{
+  padding: 20px;
 }
 
 .admin-content-right-category-list table tr:first-child{
