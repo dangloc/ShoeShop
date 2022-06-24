@@ -17,8 +17,8 @@
   
         <li> <a href="">Product</a>
           <ul>
-            <li><a href="">Add product</a></li>
-            <li><a href="">Product list</a></li>
+            <li><a href="productadd.php">Add product</a></li>
+            <li><a href="productlist.php">Product list</a></li>
           </ul>
         </li>
       </ul>
