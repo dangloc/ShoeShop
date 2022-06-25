@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+
+}
+
+a{
+  text-decoration: none;
+  
+}
+
+ul{
+  list-style: none;
+}
+
+header{
+  height:70px;
+  width: 100vw;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+header h1 {
+  margin: 20px;
+}
+
+.admin-content{
+  padding-top: 10px;
+  display:flex;
+}
+
+.admin-content-left{
+  background-color: #dddddd;
+  width:20%;
+  height: 100vh;
+  padding: 30px 0 0 12px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  border-radius: 10px;
+}
+
+.admin-content-left> ul > li > a {
+  font-weight: bold;
+  /* font-family: var(--main-text-font); */
+}
+.admin-content-left ul li {
+  margin: 20px 0;
+}
+
+.admin-content-left ul ul {
+  margin-left: 20px;
+}
+.admin-content-right{
+  width:80%;
+  padding: 30px 0 0 12px;
+}
+.admin-content-right-category-add input
+{
+  height: 35px;
+  width: 200px;
+  padding-left: 12px;
+  margin-top:20px;
+  outline: none;
+}
+.admin-content-right-category-add button {
+  display: block;
+  margin-top: 10px;
+  height:35px;
+  width: 100px;
+  cursor: pointer;
+  background-color: rgb(209, 76, 76);
+  border: none;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  transition: all 0.5s;
+}
+
+
+.admin-content-right-category-add button 
+{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.admin-content-right-category-add button:after{
+  content: ' »';
+  /* position: absolute; */
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.admin-content-right-category-add button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+  background-color: rgb(216, 17, 17);
+}
+.admin-content-right-category-add button:hover::after{
+  opacity: 1;
+  right: 10px;
+}
+
+
+/* category list */
+
+.admin-content-right-category-list table{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.admin-content-right-category-list table tr th,td {
+  border-bottom: 1px solid #dddddd;
+  
+}
+
+.admin-content-right-category-list table th,td
+{
+  padding: 20px;
+}
+
+.admin-content-right-category-list table tr:first-child{
+  background-color: #ddd;
+}
+
+
+table{
+  border-collapse: collapse;
+}
+
+/* -----------------product add--------------------- */
+
+.admin-content-right-product-add h1 {
+  margin-bottom: 20px;
+}
+.admin-content-right-product-add select,input{
+  height: 35px;
+  width: 200px;
+  display:block;
+  padding-left: 12px;
+  margin:6px 0 12px ;
+  outline: none;
+}
+
+.admin-content-right-product-add textarea {
+  display: block;
+  height: 100px;
+  width: 500px;
+  margin-bottom: 12px;
+  padding: 12px;
+}
+
+.admin-content-right-product-add button {
+  display: block;
+  margin-top: 10px;
+  height:35px;
+  width: 100px;
+  cursor: pointer;
+  background-color: rgb(209, 76, 76);
+  border: none;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  transition: all 0.5s;
+}
+
+
+.admin-content-right-product-add button 
+{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.admin-content-right-product-add button:after{
+  content: ' »';
+  /* position: absolute; */
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.admin-content-right-product-add button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+  background-color: rgb(216, 17, 17);
+}
+.admin-content-right-product-add button:hover::after{
+  opacity: 1;
+  right: 10px;
+}

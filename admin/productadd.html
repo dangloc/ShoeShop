@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Product portfolio</title>
+</head>
+<body>
+  <header>
+    <h1>Admin</h1>
+  </header>
+
+  
+  <section class="admin-content">
+    <div class="admin-content-left">
+      <ul>
+        <li><a href="">Category</a>
+          <ul>
+            <li><a href="">Add Category</a></li>
+            <li><a href="">List Category</a></li>
+          </ul>
+        </li>
+  
+        <li> <a href="">Product Type</a>
+          <ul>
+            <li><a href="">Add Product Type</a></li>
+            <li><a href="">List Product Type</a></li>
+          </ul>
+        </li>
+  
+        <li> <a href="">Product</a>
+          <ul>
+            <li><a href="">Add product</a></li>
+            <li><a href="">Product list</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="admin-content-right">
+      <div class="admin-content-right-product-add">
+        <h1>Add product</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <label for="">Product Name <span style="color: red;">*</span></label>
+          <input type="text" placeholder="Enter product name..">
+
+          <label for="">Category<span style="color: red;">*</span></label>
+          <select name="" id="">
+            <option value="#"> --Choose category-- </option>
+          </select>
+
+          <label for="">Product Type<span style="color: red;">*</span></label>
+          <select name="" id="">
+            <option value="#"> --Choose product type-- </option>
+          </select>
+
+          <label for="">Product price<span style="color: red;">*</span></label>
+          <input type="text" placeholder="Enter product price..">
+
+          <label for="">Promotional price<span style="color: red;">*</span></label>
+          <input type="text" placeholder="Enter promotional price..">
+
+          <label for="">Description product<span style="color: red;">*</span></label>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Description product.."></textarea>
+
+          <label for="">Product img<span style="color: red;">*</span></label>
+          <input type="file">
+
+          <label for="">Description img<span style="color: red;">*</span></label>
+          <input multiple type="file">
+          <button>Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+</body>
+</html>
