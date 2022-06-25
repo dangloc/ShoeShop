@@ -54,8 +54,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             <textarea name="description_product" required name="" id="editor1" cols="30" rows="10"></textarea>
 
             <label for="">Product img<span style="color: red;">*</span></label>
-            <span style="color:red;"><?php if(isset($insert_product)){ 
-              echo $insert_product; } ?></span>
             <input name="product_img" required type="file">
 
             <label for="">Description img<span style="color: red;">*</span></label>

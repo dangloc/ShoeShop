@@ -55,13 +55,7 @@ class product{
                 }
                 else{
 
-                    if($filesize >10000000)
-                    {
-                        $alert = "File cannot be larger than 1MB";
-                        return $alert;
-                    }
-                    else{
-
+                    if
                             move_uploaded_file( $_FILES['product_img']['tmp_name'],"uploads/".$_FILES['product_img']['name']);
                             $query = "INSERT INTO tbl_product (
                             product_name,
@@ -72,31 +66,28 @@ class product{
                             description_product,
                             product_img
                             ) VALUES (
-                            '$product_name', 
-                            '$category_id', 
-                            '$product_type_id', 
-                            '$product_price', 
-                            '$promote_price',                 
-                            '$description_product',
-                            '$product_img')";
+                                '$product_name', 
+                                '$category_id', 
+                                '$product_type_id', 
+                                '$product_price', 
+                                '$promote_price',                 
+                                '$description_product',
+                                '$product_img')";
                         $resutls = $this->db->insert($query);
                         if($resutls){
-                        $query = "SELECT * FROM tbl_product ORDER BY product_id DESC LIMIT 1";
-                        $results = $this-> db ->select($query)->fetch_assoc();
-                        $product_id = $results['product_id'];
-                        $filename = $_FILES['description_img']['name'];
-                        $filetmp = $_FILES['description_img']['tmp_name'];
-                        
-                        foreach($filename as $key => $val) 
-                        {
-                            move_uploaded_file($filetmp[$key],"uploads/".$val);
-                            $query = "INSERT INTO tbl_description_img (product_id,description_img) VALUES ('$product_id', '$val')";
-                            $results = $this -> db ->insert($query);
+                            $query = "SELECT * FROM tbl_product ORDER BY product_id DESC LIMIT 1";
+                            $results = $this-> db ->select($query)->fetch_assoc();
+                            $product_id = $results['product_id'];
+                            $filename = $_FILES['description_img']['name'];
+                            $filetmp = $_FILES['description_img']['tmp_name'];
+                            
+                            foreach($filename as $key => $val) 
+                            {
+                                move_uploaded_file($filetmp[$key],"uploads/".$val);
+                                $query = "INSERT INTO tbl_description_img (product_id,description_img) VALUES ('$product_id', '$val')";
+                                $results = $this -> db ->insert($query);
+                            }
                         }
-                    }
-
-                    }
-                           
                 }
 
                 

@@ -55,10 +55,9 @@ class product{
                 }
                 else{
 
-                    if($filesize >10000000)
+                    if($filesize >)
                     {
-                        $alert = "File cannot be larger than 1MB";
-                        return $alert;
+
                     }
                     else{
 

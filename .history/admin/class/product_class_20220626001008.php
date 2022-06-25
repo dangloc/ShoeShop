@@ -57,7 +57,7 @@ class product{
 
                     if($filesize >10000000)
                     {
-                        $alert = "File cannot be larger than 1MB";
+                        $alert = "File already exists";
                         return $alert;
                     }
                     else{

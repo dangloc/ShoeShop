@@ -55,23 +55,22 @@ class product{
                 }
                 else{
 
-                    if($filesize >10000000)
+                    if()
                     {
-                        $alert = "File cannot be larger than 1MB";
-                        return $alert;
+
                     }
                     else{
 
-                            move_uploaded_file( $_FILES['product_img']['tmp_name'],"uploads/".$_FILES['product_img']['name']);
-                            $query = "INSERT INTO tbl_product (
-                            product_name,
-                            category_id,
-                            product_type_id,
-                            product_price,
-                            promote_price,
-                            description_product,
-                            product_img
-                            ) VALUES (
+                        move_uploaded_file( $_FILES['product_img']['tmp_name'],"uploads/".$_FILES['product_img']['name']);
+                        $query = "INSERT INTO tbl_product (
+                        product_name,
+                        category_id,
+                        product_type_id,
+                        product_price,
+                        promote_price,
+                        description_product,
+                        product_img
+                        ) VALUES (
                             '$product_name', 
                             '$category_id', 
                             '$product_type_id', 
@@ -79,8 +78,8 @@ class product{
                             '$promote_price',                 
                             '$description_product',
                             '$product_img')";
-                        $resutls = $this->db->insert($query);
-                        if($resutls){
+                    $resutls = $this->db->insert($query);
+                    if($resutls){
                         $query = "SELECT * FROM tbl_product ORDER BY product_id DESC LIMIT 1";
                         $results = $this-> db ->select($query)->fetch_assoc();
                         $product_id = $results['product_id'];
